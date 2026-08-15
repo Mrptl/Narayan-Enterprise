@@ -1,0 +1,706 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Contact Us - Narayan Enterprise</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary": "#ffffff",
+                      "surface-container": "#eceef0",
+                      "on-error": "#ffffff",
+                      "on-secondary-container": "#5a636f",
+                      "outline": "#747780",
+                      "primary-fixed": "#d7e2ff",
+                      "on-secondary-fixed": "#131c26",
+                      "surface-dim": "#d8dadc",
+                      "on-background": "#191c1e",
+                      "on-tertiary-fixed-variant": "#41474e",
+                      "tertiary": "#151b21",
+                      "surface-variant": "#e0e3e5",
+                      "on-tertiary-fixed": "#161c22",
+                      "on-surface-variant": "#44474f",
+                      "secondary-fixed": "#dae3f1",
+                      "on-surface": "#191c1e",
+                      "on-error-container": "#93000a",
+                      "tertiary-fixed-dim": "#c1c7cf",
+                      "surface-tint": "#435e91",
+                      "secondary": "#565f6b",
+                      "error-container": "#ffdad6",
+                      "on-primary-container": "#7c97cd",
+                      "on-tertiary-container": "#91979f",
+                      "on-secondary-fixed-variant": "#3f4753",
+                      "tertiary-fixed": "#dde3eb",
+                      "inverse-on-surface": "#eff1f3",
+                      "tertiary-container": "#293036",
+                      "surface-container-low": "#f2f4f6",
+                      "secondary-fixed-dim": "#bec7d5",
+                      "primary-container": "#0d2e5e",
+                      "primary-fixed-dim": "#acc7ff",
+                      "inverse-primary": "#acc7ff",
+                      "surface-container-lowest": "#ffffff",
+                      "error": "#ba1a1a",
+                      "secondary-container": "#d7e0ee",
+                      "background": "#f7f9fb",
+                      "inverse-surface": "#2d3133",
+                      "outline-variant": "#c4c6d0",
+                      "on-primary-fixed-variant": "#2a4677",
+                      "primary": "#00193e",
+                      "surface-container-high": "#e6e8ea",
+                      "on-primary-fixed": "#001a40",
+                      "surface-bright": "#f7f9fb",
+                      "surface-container-highest": "#e0e3e5",
+                      "surface": "#f7f9fb",
+                      "on-primary": "#ffffff",
+                      "on-tertiary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "margin-desktop": "64px",
+                      "unit": "8px",
+                      "panel-padding": "32px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "button-text": [
+                              "Montserrat"
+                      ],
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "display-lg": [
+                              "Montserrat"
+                      ],
+                      "headline-md": [
+                              "Montserrat"
+                      ],
+                      "headline-lg-mobile": [
+                              "Montserrat"
+                      ],
+                      "label-caps": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-lg": [
+                              "Montserrat"
+                      ]
+              },
+              "fontSize": {
+                      "button-text": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+            },
+          }
+        }
+      </script>
+<style>
+        /* Modern Industrial Minimalism Textures & Depth */
+        body {
+            background-color: theme('colors.background');
+            background-image: repeating-linear-gradient(45deg, rgba(200, 200, 200, 0.03) 0px, rgba(200, 200, 200, 0.03) 1px, transparent 1px, transparent 4px);
+        }
+        
+        .panel-3d {
+            background: theme('colors.surface-container-lowest');
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05), inset 0 1px 0 rgba(255,255,255,0.4);
+            border: 1px solid theme('colors.surface-container-highest');
+        }
+
+        .input-inset {
+            background: theme('colors.surface-container-low');
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+            border: 1px solid theme('colors.outline-variant');
+        }
+
+        .btn-metallic {
+            background: linear-gradient(180deg, theme('colors.primary-fixed-dim'), theme('colors.primary'));
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 2px 4px rgba(0,0,0,0.2);
+            border-bottom: 2px solid theme('colors.on-primary-fixed');
+            color: theme('colors.on-primary');
+            transition: all 0.1s ease;
+        }
+
+        .btn-metallic:active {
+            border-bottom-width: 0px;
+            transform: translateY(2px);
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .icon-bevel {
+            background: linear-gradient(135deg, theme('colors.surface-container-lowest'), theme('colors.surface-container-high'));
+            border: 1px solid theme('colors.outline-variant');
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 4px rgba(0,0,0,0.05);
+        }
+      </style>
+</head>
+<body class="min-h-screen flex flex-col font-body-md text-body-md text-on-surface">
+<div class="block lg:hidden">
+
+<!-- Desktop Navigation Drawer (Hidden on Mobile) -->
+<div class="hidden md:flex flex-col bg-surface-container-lowest dark:bg-tertiary-container text-primary dark:text-inverse-primary font-label-caps text-label-caps rounded-r-xl h-full w-80 border-r border-outline-variant shadow-xl fixed inset-y-0 left-0 z-[60]">
+<div class="p-6 border-b border-outline-variant">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight">NARAYAN ENTERPRISE</h1>
+</div>
+<nav class="flex-1 py-4">
+<a class="text-on-surface-variant hover:bg-surface-container-high mx-2 my-1 rounded-lg flex items-center p-3 font-label-caps text-label-caps" href="index.html">
+<span class="material-symbols-outlined mr-3">home</span> HOME
+</a>
+<a class="text-on-surface-variant hover:bg-surface-container-high mx-2 my-1 rounded-lg flex items-center p-3 font-label-caps text-label-caps" href="about.html">
+<span class="material-symbols-outlined mr-3">info</span> ABOUT US
+</a>
+<a class="text-on-surface-variant hover:bg-surface-container-high mx-2 my-1 rounded-lg flex items-center p-3 font-label-caps text-label-caps" href="industries.html">
+<span class="material-symbols-outlined mr-3">factory</span> INDUSTRIES
+</a>
+<a class="text-on-surface-variant hover:bg-surface-container-high mx-2 my-1 rounded-lg flex items-center p-3 font-label-caps text-label-caps" href="products.html">
+<span class="material-symbols-outlined mr-3">inventory_2</span> PRODUCTS
+</a>
+<a class="bg-primary-container text-on-primary-container rounded-lg mx-2 my-1 flex items-center p-3 font-label-caps text-label-caps" href="contact.html">
+<span class="material-symbols-outlined mr-3" style="font-variation-settings: 'FILL' 1;">mail</span> CONTACT US
+</a>
+</nav>
+</div>
+<!-- Mobile Top App Bar -->
+<header class="w-[95%] max-w-7xl mx-auto top-4 sticky z-50 bg-surface/95 dark:bg-tertiary-container/95 backdrop-blur-md border border-outline-variant rounded-2xl shadow-lg transition-all duration-300">
+<div class="flex items-center gap-4">
+<button class="p-2 -ml-2 text-primary hover:bg-surface-container-high rounded-full transition-all duration-200 active:scale-95">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<span class="font-display-lg text-headline-lg-mobile tracking-tighter text-primary dark:text-primary-fixed uppercase">NARAYAN</span>
+</div>
+<span class="material-symbols-outlined text-primary text-3xl">precision_manufacturing</span>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 md:ml-80 pt-8 pb-16 px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto w-full">
+<!-- Page Header -->
+<div class="mb-12 border-b border-outline-variant pb-6 flex items-end justify-between">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary uppercase tracking-tight">Contact Us</h2>
+<p class="text-on-surface-variant mt-2 font-body-lg">Get in touch with our engineering and sales teams.</p>
+</div>
+<span class="material-symbols-outlined text-4xl text-outline hidden md:block">support_agent</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column: Map & Info -->
+<div class="lg:col-span-5 flex flex-col gap-gutter">
+<!-- Info Panel -->
+<div class="industrial-panel rounded-xl p-6 lg:p-8">
+<div class="corner-tl"></div>
+<div class="corner-tr"></div>
+<h3 class="font-headline-md text-headline-md text-primary mb-6 border-b border-outline-variant pb-4">Corporate Office</h3>
+<ul class="space-y-6">
+<li class="flex items-start">
+<div class="bg-surface-container-high p-3 rounded-lg mr-4 shadow-sm border border-outline-variant">
+<span class="material-symbols-outlined text-primary">location_on</span>
+</div>
+<div>
+<span class="block font-label-caps text-label-caps text-on-surface-variant mb-1">ADDRESS</span>
+<p class="font-body-md text-on-surface">123 Steelworks Ave, Industrial Estate Phase II, Mumbai, Maharashtra 400001</p>
+</div>
+</li>
+<li class="flex items-start">
+<div class="bg-surface-container-high p-3 rounded-lg mr-4 shadow-sm border border-outline-variant">
+<span class="material-symbols-outlined text-primary">call</span>
+</div>
+<div>
+<span class="block font-label-caps text-label-caps text-on-surface-variant mb-1">PHONE</span>
+<p class="font-body-md text-on-surface">+91 22 1234 5678</p>
+<p class="font-body-md text-on-surface">+91 98765 43210</p>
+</div>
+</li>
+<li class="flex items-start">
+<div class="bg-surface-container-high p-3 rounded-lg mr-4 shadow-sm border border-outline-variant">
+<span class="material-symbols-outlined text-primary">mail</span>
+</div>
+<div>
+<span class="block font-label-caps text-label-caps text-on-surface-variant mb-1">EMAIL</span>
+<p class="font-body-md text-on-surface">sales@narayanenterprise.com</p>
+</div>
+</li>
+</ul>
+</div>
+<!-- Map Panel -->
+<div class="industrial-panel rounded-xl overflow-hidden h-64 lg:h-auto lg:flex-1 relative border border-outline-variant group">
+<div class="absolute inset-0 z-10 pointer-events-none shadow-[inset_0_0_20px_rgba(0,0,0,0.1)]"></div>
+<!-- Placeholder for Map Image -->
+<img class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 transition-all duration-500" data-alt="A highly detailed, top-down 3D isometric view of an industrial estate in a modern city like Mumbai. The map is stylized in a modern industrial aesthetic with a light mode color palette of grays, subtle blues, and whites. Metallic textures are visible on buildings. A prominent, glowing blue 3D location pin stands in the center." data-location="Mumbai" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc1rh4LlopujpFEdWktpidv7WHVfl4r3w0qZ3xafrR_bk7se_bJeCjeFOsVqQBnvt8RC367yF70jyuhXhQB-PO6IayPoIuV_9qSDDsLb4DmHjNZPPkYrUpZhRf2A3DOCOqFQDQU2y6vpA9Fq97oMpGJLlszmQ-eaZEX7mS0K5pyi4bQo8LxhGmPApOr98jCMmxar1J0ls5t_Hche-Cn_aN9_lJZNn05LjTeFKAUOOhrTqHD69_XlSA">
+<div class="absolute bottom-4 right-4 z-20 bg-surface-container-lowest px-4 py-2 rounded shadow-md border border-outline-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">map</span>
+<span class="font-label-caps text-label-caps text-primary">VIEW ON MAPS</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Form -->
+<div class="lg:col-span-7">
+<div class="industrial-panel rounded-xl p-6 lg:p-10 h-full">
+<div class="corner-tl"></div>
+<div class="corner-tr"></div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Send an Enquiry</h3>
+<p class="text-on-surface-variant font-body-md mb-8">Please fill out the form below. Our industrial sales team will respond within 24 hours.</p>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Name -->
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2" for="name">FULL NAME</label>
+<input class="metallic-input w-full rounded-md px-4 py-3 font-body-md text-on-surface placeholder:font-display-lg placeholder:text-sm placeholder:font-normal placeholder:text-outline" id="name" name="name" placeholder="Enter your full name" type="text">
+</div>
+<!-- Company -->
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2" for="company">COMPANY / ORGANIZATION</label>
+<input class="metallic-input w-full rounded-md px-4 py-3 font-body-md text-on-surface placeholder:font-display-lg placeholder:text-sm placeholder:font-normal placeholder:text-outline" id="company" name="company" placeholder="Your company name" type="text">
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Email -->
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2" for="email">EMAIL ADDRESS</label>
+<input class="metallic-input w-full rounded-md px-4 py-3 font-body-md text-on-surface placeholder:font-display-lg placeholder:text-sm placeholder:font-normal placeholder:text-outline" id="email" name="email" placeholder="name@company.com" type="email">
+</div>
+<!-- Phone -->
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2" for="phone">PHONE NUMBER</label>
+<input class="metallic-input w-full rounded-md px-4 py-3 font-body-md text-on-surface placeholder:font-display-lg placeholder:text-sm placeholder:font-normal placeholder:text-outline" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" type="tel">
+</div>
+</div>
+<!-- Industry Dropdown -->
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2" for="industry">INDUSTRY SECTOR</label>
+<div class="relative">
+<select class="metallic-input w-full rounded-md px-4 py-3 font-body-md text-on-surface appearance-none" id="industry" name="industry">
+<option disabled="" selected="" value="">Select your industry</option>
+<option value="construction">Construction &amp; Infrastructure</option>
+<option value="automotive">Automotive</option>
+<option value="manufacturing">Heavy Manufacturing</option>
+<option value="energy">Energy &amp; Power</option>
+<option value="other">Other</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-on-surface-variant">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Message -->
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2" for="message">REQUIREMENT DETAILS</label>
+<textarea class="metallic-input w-full rounded-md px-4 py-3 font-body-md text-on-surface placeholder:font-display-lg placeholder:text-sm placeholder:font-normal placeholder:text-outline resize-y" id="message" name="message" placeholder="Please describe your steel requirements, specifications, or general enquiry..." rows="5"></textarea>
+</div>
+<!-- Submit Button -->
+<div class="pt-4 flex justify-end">
+<button class="metallic-btn text-on-primary font-button-text text-button-text py-4 px-8 rounded flex items-center gap-3" type="submit">
+<span>SEND ENQUIRY</span>
+<span class="material-symbols-outlined text-sm">send</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<!-- Footer -->
+<footer class="md:ml-80 md:w-[calc(100%-20rem)] z-50 bg-tertiary-container dark:bg-on-background w-full mt-auto border-t border-outline shadow-[inset_0_2px_4px_rgba(0,0,0,0.1)] relative overflow-hidden">
+<!-- Subtle background accent/gradient -->
+<div class="absolute inset-0 bg-gradient-to-br from-tertiary-container via-tertiary-container to-[#1a1f24] opacity-80 z-0"></div>
+
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-16 relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+    <!-- Brand & Info -->
+    <div class="flex flex-col gap-6">
+        <div class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center shadow-md">
+            <span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+        </div>
+        <span class="font-display-lg text-headline-md tracking-tighter text-surface-bright uppercase">Narayan Enterprise</span>
+        </div>
+        <p class="font-body-md text-surface-variant leading-relaxed">
+        Forging the future with precision steel. Supplying top-grade materials for industrial and structural needs worldwide.
+        </p>
+        <!-- Socials -->
+        <div class="flex gap-4 mt-2">
+        <a href="#" class="w-10 h-10 rounded-full bg-surface-variant/10 flex items-center justify-center text-surface-bright hover:bg-primary-fixed hover:text-primary transition-colors hover:-translate-y-1">
+            <span class="material-symbols-outlined text-[20px]">share</span>
+        </a>
+        <a href="#" class="w-10 h-10 rounded-full bg-surface-variant/10 flex items-center justify-center text-surface-bright hover:bg-primary-fixed hover:text-primary transition-colors hover:-translate-y-1">
+            <span class="material-symbols-outlined text-[20px]">language</span>
+        </a>
+        </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="flex flex-col gap-4">
+        <h4 class="font-label-caps text-label-caps text-primary-fixed mb-2">QUICK LINKS</h4>
+        <nav class="flex flex-col gap-3">
+        <a class="font-body-md text-surface-variant hover:text-primary-fixed hover:translate-x-1 transition-all flex items-center gap-2 w-fit" href="index.html">
+            <span class="material-symbols-outlined text-[16px]">chevron_right</span> Home
+        </a>
+        <a class="font-body-md text-surface-variant hover:text-primary-fixed hover:translate-x-1 transition-all flex items-center gap-2 w-fit" href="about.html">
+            <span class="material-symbols-outlined text-[16px]">chevron_right</span> About Us
+        </a>
+        <a class="font-body-md text-surface-variant hover:text-primary-fixed hover:translate-x-1 transition-all flex items-center gap-2 w-fit" href="industries.html">
+            <span class="material-symbols-outlined text-[16px]">chevron_right</span> Industries
+        </a>
+        <a class="font-body-md text-surface-variant hover:text-primary-fixed hover:translate-x-1 transition-all flex items-center gap-2 w-fit" href="products.html">
+            <span class="material-symbols-outlined text-[16px]">chevron_right</span> Products
+        </a>
+        <a class="font-body-md text-surface-variant hover:text-primary-fixed hover:translate-x-1 transition-all flex items-center gap-2 w-fit" href="contact.html">
+            <span class="material-symbols-outlined text-[16px]">chevron_right</span> Contact Us
+        </a>
+        </nav>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="flex flex-col gap-4">
+        <h4 class="font-label-caps text-label-caps text-primary-fixed mb-2">CONTACT US</h4>
+        <ul class="flex flex-col gap-4">
+        <li class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-primary-fixed mt-0.5" style="font-variation-settings: 'FILL' 1;">location_on</span>
+            <span class="font-body-md text-surface-variant">123 Steel Hub Industrial Estate,<br>Mumbai, Maharashtra 400001</span>
+        </li>
+        <li class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary-fixed" style="font-variation-settings: 'FILL' 1;">call</span>
+            <span class="font-body-md text-surface-variant">+91 98765 43210</span>
+        </li>
+        <li class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary-fixed" style="font-variation-settings: 'FILL' 1;">mail</span>
+            <span class="font-body-md text-surface-variant">sales@narayanenterprise.com</span>
+        </li>
+        </ul>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="flex flex-col gap-4">
+        <h4 class="font-label-caps text-label-caps text-primary-fixed mb-2">STAY UPDATED</h4>
+        <p class="font-body-md text-surface-variant mb-2">Subscribe to our newsletter for the latest market insights and product updates.</p>
+        <form class="flex flex-col gap-3 group" onsubmit="event.preventDefault();">
+        <div class="relative">
+            <input type="email" placeholder="Email Address" required class="w-full bg-surface-variant/10 border border-outline-variant/30 rounded-lg px-4 py-3 text-surface-bright placeholder:text-surface-variant/50 focus:outline-none focus:border-primary-fixed focus:ring-1 focus:ring-primary-fixed transition-all font-body-md">
+        </div>
+        <button type="submit" class="bg-primary-fixed text-primary font-button-text font-bold rounded-lg px-4 py-3 hover:bg-surface-bright transition-colors flex justify-center items-center gap-2 active:scale-95">
+            SUBSCRIBE <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </button>
+        </form>
+    </div>
+    </div>
+</div>
+
+<!-- Bottom bar -->
+<div class="border-t border-outline-variant/20 relative z-10">
+    <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+    <p class="font-body-md text-surface-variant text-sm text-center md:text-left">
+        &copy; 2024 Narayan Enterprise. All Rights Reserved.
+    </p>
+    <div class="flex gap-6">
+        <a href="#" class="font-body-md text-surface-variant text-sm hover:text-primary-fixed transition-colors">Privacy Policy</a>
+        <a href="#" class="font-body-md text-surface-variant text-sm hover:text-primary-fixed transition-colors">Terms of Service</a>
+    </div>
+    </div>
+</div>
+</footer>
+
+</div>
+<div class="hidden lg:block">
+
+<!-- TopAppBar -->
+<header class="w-[95%] max-w-7xl mx-auto top-4 sticky z-50 bg-surface/95 dark:bg-tertiary-container/95 backdrop-blur-md border border-outline-variant rounded-2xl shadow-lg transition-all duration-300">
+<div class="max-w-7xl mx-auto px-margin-desktop flex justify-between items-center h-20">
+<div class="flex items-center gap-2 font-display-lg text-headline-md tracking-tighter text-primary dark:text-primary-fixed uppercase active:scale-95 transition-transform cursor-pointer">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+                Narayan Enterprise
+            </div>
+<nav class="hidden md:flex gap-8">
+<a class="text-secondary font-medium hover:text-primary transition-colors hover:bg-surface-container-high transition-all duration-200 px-3 py-2 rounded-lg font-label-caps text-label-caps flex items-center gap-2" href="index.html">
+<span class="material-symbols-outlined text-[18px]">home</span> HOME
+</a>
+<a class="text-secondary font-medium hover:text-primary transition-colors hover:bg-surface-container-high transition-all duration-200 px-3 py-2 rounded-lg font-label-caps text-label-caps flex items-center gap-2" href="about.html">
+<span class="material-symbols-outlined text-[18px]">info</span> ABOUT US
+</a>
+<a class="text-secondary font-medium hover:text-primary transition-colors hover:bg-surface-container-high transition-all duration-200 px-3 py-2 rounded-lg font-label-caps text-label-caps flex items-center gap-2" href="industries.html">
+<span class="material-symbols-outlined text-[18px]">factory</span> INDUSTRIES
+</a>
+<a class="text-secondary font-medium hover:text-primary transition-colors hover:bg-surface-container-high transition-all duration-200 px-3 py-2 rounded-lg font-label-caps text-label-caps flex items-center gap-2" href="products.html">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span> PRODUCTS
+</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 px-3 py-2 font-label-caps text-label-caps flex items-center gap-2" href="contact.html">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">mail</span> CONTACT US
+</a>
+</nav>
+<button class="md:hidden p-2 text-primary active:scale-95 transition-transform">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-grow w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-12 flex flex-col gap-12">
+<!-- Hero Map Section -->
+<section class="w-full h-64 md:h-96 panel-3d rounded-xl overflow-hidden relative">
+<div class="bg-cover bg-center w-full h-full absolute inset-0" data-alt="A highly detailed, 3D rendered isometric map of a modern industrial park or steel trading district, viewed from above. The aesthetic is clean, light-mode, and architectural, using a color palette of metallic blues, brushed steel grays, and crisp whites. Small glowing accents suggest activity. The style mimics a high-end corporate presentation or structural blueprint brought to life." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBnkMC975AcC6utAHrzsekI6nAzjLVzo3F-sAq1k5pleD4Vj8Pm5f0uY6APXzuYZ-uRLEXhbI46V7wp1vH-EZs8D-Vbc1H7WrvROGxrJtaCgVCMtmnA-C8aSd-vMGf-HDsup7Yu9S-OasP6O3u6VEtntDaIR6GD6ptQSCHhHDG_9r7AzliRkfMUINnfpuAweTwP9MIeYeHrQOQdPDJOHdqiuqjdmUoGPopMJOiBy7e_D8dBgLpJkhOf')"></div>
+<!-- Bolt accents -->
+<div class="absolute top-4 left-4 w-3 h-3 rounded-full icon-bevel"></div>
+<div class="absolute top-4 right-4 w-3 h-3 rounded-full icon-bevel"></div>
+<div class="absolute bottom-4 left-4 w-3 h-3 rounded-full icon-bevel"></div>
+<div class="absolute bottom-4 right-4 w-3 h-3 rounded-full icon-bevel"></div>
+</section>
+<!-- Contact Content Grid -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left Column: Contact Info -->
+<div class="lg:col-span-5 flex flex-col gap-8">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-primary mb-2">Contact Us</h1>
+<p class="font-body-lg text-body-lg text-secondary">Connect with our team for high-quality steel procurement and structural solutions.</p>
+</div>
+<div class="flex flex-col gap-6">
+<div class="flex items-start gap-4 p-4 panel-3d rounded-lg">
+<div class="w-12 h-12 rounded flex items-center justify-center icon-bevel text-primary shrink-0">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<h3 class="font-label-caps text-label-caps text-secondary mb-1">CORPORATE OFFICE</h3>
+<p class="font-body-md text-body-md text-on-surface">124 Industrial Estate, Phase II<br>Steel City, SC 45001</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 panel-3d rounded-lg">
+<div class="w-12 h-12 rounded flex items-center justify-center icon-bevel text-primary shrink-0">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<h3 class="font-label-caps text-label-caps text-secondary mb-1">PHONE</h3>
+<p class="font-body-md text-body-md text-on-surface">+1 (555) 890-1234<br>+1 (555) 890-1235</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 panel-3d rounded-lg">
+<div class="w-12 h-12 rounded flex items-center justify-center icon-bevel text-primary shrink-0">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<h3 class="font-label-caps text-label-caps text-secondary mb-1">EMAIL</h3>
+<p class="font-body-md text-body-md text-on-surface">sales@narayanenterprise.com<br>info@narayanenterprise.com</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Enquiry Form -->
+<div class="lg:col-span-7 panel-3d rounded-xl p-panel-padding relative">
+<!-- Bolt accents -->
+<div class="absolute top-4 left-4 w-2 h-2 rounded-full icon-bevel"></div>
+<div class="absolute top-4 right-4 w-2 h-2 rounded-full icon-bevel"></div>
+<h2 class="font-headline-md text-headline-md text-primary mb-6 pb-4 border-b border-outline-variant">Send an Enquiry</h2>
+<form class="flex flex-col gap-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-secondary">FULL NAME</label>
+<input class="input-inset w-full rounded p-3 font-button-text focus:outline-none focus:ring-2 focus:ring-primary-container" placeholder="Jane Doe" type="text">
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-secondary">COMPANY</label>
+<input class="input-inset w-full rounded p-3 font-button-text focus:outline-none focus:ring-2 focus:ring-primary-container" placeholder="Acme Construction" type="text">
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-secondary">EMAIL</label>
+<input class="input-inset w-full rounded p-3 font-button-text focus:outline-none focus:ring-2 focus:ring-primary-container" placeholder="jane@example.com" type="email">
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-secondary">PHONE</label>
+<input class="input-inset w-full rounded p-3 font-button-text focus:outline-none focus:ring-2 focus:ring-primary-container" placeholder="+1 (555) 000-0000" type="tel">
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-secondary">INDUSTRY</label>
+<select class="input-inset w-full rounded p-3 font-button-text focus:outline-none focus:ring-2 focus:ring-primary-container appearance-none">
+<option>Construction &amp; Real Estate</option>
+<option>Automotive</option>
+<option>Manufacturing</option>
+<option>Infrastructure</option>
+<option>Other</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-secondary">REQUIREMENT DETAILS</label>
+<textarea class="input-inset w-full rounded p-3 font-button-text focus:outline-none focus:ring-2 focus:ring-primary-container resize-none" placeholder="Please describe your steel procurement needs, including grades, tonnage, and timelines..." rows="4"></textarea>
+</div>
+<button class="btn-metallic w-full py-4 rounded font-button-text text-button-text tracking-widest mt-4" type="button">
+                        SUBMIT ENQUIRY
+                    </button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<!-- Footer -->
+<footer class="bg-tertiary-container dark:bg-on-background w-full mt-auto border-t border-outline shadow-[inset_0_2px_4px_rgba(0,0,0,0.1)] relative overflow-hidden">
+<!-- Subtle background accent/gradient -->
+<div class="absolute inset-0 bg-gradient-to-br from-tertiary-container via-tertiary-container to-[#1a1f24] opacity-80 z-0"></div>
+
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-16 relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+    <!-- Brand & Info -->
+    <div class="flex flex-col gap-6">
+        <div class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center shadow-md">
+            <span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+        </div>
+        <span class="font-display-lg text-headline-md tracking-tighter text-surface-bright uppercase">Narayan Enterprise</span>
+        </div>
+        <p class="font-body-md text-surface-variant leading-relaxed">
+        Forging the future with precision steel. Supplying top-grade materials for industrial and structural needs worldwide.
+        </p>
+        <!-- Socials -->
+        <div class="flex gap-4 mt-2">
+        <a href="#" class="w-10 h-10 rounded-full bg-surface-variant/10 flex items-center justify-center text-surface-bright hover:bg-primary-fixed hover:text-primary transition-colors hover:-translate-y-1">
+            <span class="material-symbols-outlined text-[20px]">share</span>
+        </a>
+        <a href="#" class="w-10 h-10 rounded-full bg-surface-variant/10 flex items-center justify-center text-surface-bright hover:bg-primary-fixed hover:text-primary transition-colors hover:-translate-y-1">
+            <span class="material-symbols-outlined text-[20px]">language</span>
+        </a>
+        </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="flex flex-col gap-4">
+        <h4 class="font-label-caps text-label-caps text-primary-fixed mb-2">QUICK LINKS</h4>
+        <nav class="flex flex-col gap-3">
+        <a class="font-body-md text-surface-variant hover:text-primary-fixed hover:translate-x-1 transition-all flex items-center gap-2 w-fit" href="index.html">
+            <span class="material-symbols-outlined text-[16px]">chevron_right</span> Home
+        </a>
+        <a class="font-body-md text-surface-variant hover:text-primary-fixed hover:translate-x-1 transition-all flex items-center gap-2 w-fit" href="about.html">
+            <span class="material-symbols-outlined text-[16px]">chevron_right</span> About Us
+        </a>
+        <a class="font-body-md text-surface-variant hover:text-primary-fixed hover:translate-x-1 transition-all flex items-center gap-2 w-fit" href="industries.html">
+            <span class="material-symbols-outlined text-[16px]">chevron_right</span> Industries
+        </a>
+        <a class="font-body-md text-surface-variant hover:text-primary-fixed hover:translate-x-1 transition-all flex items-center gap-2 w-fit" href="products.html">
+            <span class="material-symbols-outlined text-[16px]">chevron_right</span> Products
+        </a>
+        <a class="font-body-md text-surface-variant hover:text-primary-fixed hover:translate-x-1 transition-all flex items-center gap-2 w-fit" href="contact.html">
+            <span class="material-symbols-outlined text-[16px]">chevron_right</span> Contact Us
+        </a>
+        </nav>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="flex flex-col gap-4">
+        <h4 class="font-label-caps text-label-caps text-primary-fixed mb-2">CONTACT US</h4>
+        <ul class="flex flex-col gap-4">
+        <li class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-primary-fixed mt-0.5" style="font-variation-settings: 'FILL' 1;">location_on</span>
+            <span class="font-body-md text-surface-variant">123 Steel Hub Industrial Estate,<br>Mumbai, Maharashtra 400001</span>
+        </li>
+        <li class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary-fixed" style="font-variation-settings: 'FILL' 1;">call</span>
+            <span class="font-body-md text-surface-variant">+91 98765 43210</span>
+        </li>
+        <li class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary-fixed" style="font-variation-settings: 'FILL' 1;">mail</span>
+            <span class="font-body-md text-surface-variant">sales@narayanenterprise.com</span>
+        </li>
+        </ul>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="flex flex-col gap-4">
+        <h4 class="font-label-caps text-label-caps text-primary-fixed mb-2">STAY UPDATED</h4>
+        <p class="font-body-md text-surface-variant mb-2">Subscribe to our newsletter for the latest market insights and product updates.</p>
+        <form class="flex flex-col gap-3 group" onsubmit="event.preventDefault();">
+        <div class="relative">
+            <input type="email" placeholder="Email Address" required class="w-full bg-surface-variant/10 border border-outline-variant/30 rounded-lg px-4 py-3 text-surface-bright placeholder:text-surface-variant/50 focus:outline-none focus:border-primary-fixed focus:ring-1 focus:ring-primary-fixed transition-all font-body-md">
+        </div>
+        <button type="submit" class="bg-primary-fixed text-primary font-button-text font-bold rounded-lg px-4 py-3 hover:bg-surface-bright transition-colors flex justify-center items-center gap-2 active:scale-95">
+            SUBSCRIBE <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </button>
+        </form>
+    </div>
+    </div>
+</div>
+
+<!-- Bottom bar -->
+<div class="border-t border-outline-variant/20 relative z-10">
+    <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+    <p class="font-body-md text-surface-variant text-sm text-center md:text-left">
+        &copy; 2024 Narayan Enterprise. All Rights Reserved.
+    </p>
+    <div class="flex gap-6">
+        <a href="#" class="font-body-md text-surface-variant text-sm hover:text-primary-fixed transition-colors">Privacy Policy</a>
+        <a href="#" class="font-body-md text-surface-variant text-sm hover:text-primary-fixed transition-colors">Terms of Service</a>
+    </div>
+    </div>
+</div>
+</footer>
+
+</div>
+        </body></html>

@@ -1,0 +1,769 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Narayan Enterprise - Precision Steel</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#eceef0",
+                        "on-error": "#ffffff",
+                        "on-secondary-container": "#5a636f",
+                        "outline": "#747780",
+                        "primary-fixed": "#d7e2ff",
+                        "on-secondary-fixed": "#131c26",
+                        "surface-dim": "#d8dadc",
+                        "on-background": "#191c1e",
+                        "on-tertiary-fixed-variant": "#41474e",
+                        "tertiary": "#151b21",
+                        "surface-variant": "#e0e3e5",
+                        "on-tertiary-fixed": "#161c22",
+                        "on-surface-variant": "#44474f",
+                        "secondary-fixed": "#dae3f1",
+                        "on-surface": "#191c1e",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#c1c7cf",
+                        "surface-tint": "#435e91",
+                        "secondary": "#565f6b",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#7c97cd",
+                        "on-tertiary-container": "#91979f",
+                        "on-secondary-fixed-variant": "#3f4753",
+                        "tertiary-fixed": "#dde3eb",
+                        "inverse-on-surface": "#eff1f3",
+                        "tertiary-container": "#293036",
+                        "surface-container-low": "#f2f4f6",
+                        "secondary-fixed-dim": "#bec7d5",
+                        "primary-container": "#0d2e5e",
+                        "primary-fixed-dim": "#acc7ff",
+                        "inverse-primary": "#acc7ff",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#d7e0ee",
+                        "background": "#f7f9fb",
+                        "inverse-surface": "#2d3133",
+                        "outline-variant": "#c4c6d0",
+                        "on-primary-fixed-variant": "#2a4677",
+                        "primary": "#00193e",
+                        "surface-container-high": "#e6e8ea",
+                        "on-primary-fixed": "#001a40",
+                        "surface-bright": "#f7f9fb",
+                        "surface-container-highest": "#e0e3e5",
+                        "surface": "#f7f9fb",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "unit": "8px",
+                        "panel-padding": "32px",
+                        "gutter": "24px"
+                    },
+                    fontFamily: {
+                        "button-text": ["Outfit", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "display-lg": ["Outfit", "sans-serif"],
+                        "headline-md": ["Outfit", "sans-serif"],
+                        "headline-lg-mobile": ["Outfit", "sans-serif"],
+                        "label-caps": ["Inter", "sans-serif"],
+                        "headline-lg": ["Outfit", "sans-serif"]
+                    },
+                    fontSize: {
+                        "button-text": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            background-image: linear-gradient(theme('colors.outline-variant') 1px, transparent 1px),
+                              linear-gradient(90deg, theme('colors.outline-variant') 1px, transparent 1px);
+            background-size: 40px 40px;
+            background-position: center;
+        }
+        .metal-panel {
+            background: linear-gradient(135deg, theme('colors.surface-container-lowest') 0%, theme('colors.surface-container') 100%);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 -1px 0 rgba(0, 0, 0, 0.05);
+            border: 1px solid theme('colors.outline-variant');
+        }
+        .btn-metal {
+            background: linear-gradient(to bottom, theme('colors.primary-container'), theme('colors.primary'));
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 2px 0 theme('colors.on-background');
+            transition: all 0.1s;
+        }
+        .btn-metal:active {
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 0 0 theme('colors.on-background');
+            transform: translateY(2px);
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface antialiased flex flex-col min-h-screen">
+<div class="block lg:hidden">
+
+<!-- Background Shader -->
+<!-- STITCH_SHADER_START:ANIMATION_4 class="absolute inset-0 w-full h-full -z-10 opacity-30 mix-blend-multiply" -->
+<div class="absolute inset-0 w-full h-full -z-10 opacity-30 mix-blend-multiply" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_4" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_4');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+uniform float u_time;
+uniform vec2 u_resolution;
+varying vec2 v_texCoord;
+
+void main() {
+    vec2 uv = v_texCoord;
+    
+    // Create a subtle metallic grain/brushed texture
+    float grain = fract(sin(dot(uv * u_resolution.x, vec2(12.9898, 78.233))) * 43758.5453);
+    
+    // Slow moving industrial blue and steel gray gradients
+    vec3 color1 = vec3(0.05, 0.18, 0.37); // Deep metallic blue
+    vec3 color2 = vec3(0.85, 0.85, 0.88); // Brushed steel silver
+    vec3 color3 = vec3(0.15, 0.25, 0.45); // Mid blue
+    
+    float noise = sin(uv.x * 3.0 + u_time * 0.2) * cos(uv.y * 2.0 - u_time * 0.1);
+    vec3 baseColor = mix(color1, color2, noise * 0.5 + 0.5);
+    baseColor = mix(baseColor, color3, uv.y);
+    
+    // Add "architectural lighting" highlight
+    float highlight = pow(max(0.0, 1.0 - length(uv - vec2(0.2, 0.8))), 4.0);
+    baseColor += highlight * 0.15;
+    
+    // Blend in texture
+    baseColor += (grain - 0.5) * 0.02;
+
+    gl_FragColor = vec4(baseColor, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_4 -->
+<!-- Navigation Drawer (Mobile) -->
+<div class="fixed inset-y-0 left-0 z-[60] flex flex-col rounded-r-xl h-full w-80 shadow-xl border-r border-outline-variant bg-surface-container-lowest dark:bg-tertiary-container transform -translate-x-full transition-transform duration-300 md:hidden" id="mobile-nav">
+<div class="p-panel-padding border-b border-outline-variant flex justify-between items-center">
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">NARAYAN ENTERPRISE</span>
+<button class="text-on-surface-variant p-2" id="close-nav">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex-1 py-4">
+<a class="bg-primary-container text-on-primary-container rounded-lg mx-2 my-1 flex items-center p-3 font-label-caps text-label-caps" href="index.html">
+<span class="material-symbols-outlined mr-3" style="font-variation-settings: 'FILL' 1;">home</span> HOME
+</a>
+<a class="text-on-surface-variant hover:bg-surface-container-high mx-2 my-1 rounded-lg flex items-center p-3 font-label-caps text-label-caps" href="about.html">
+<span class="material-symbols-outlined mr-3">info</span> ABOUT US
+</a>
+<a class="text-on-surface-variant hover:bg-surface-container-high mx-2 my-1 rounded-lg flex items-center p-3 font-label-caps text-label-caps" href="industries.html">
+<span class="material-symbols-outlined mr-3">factory</span> INDUSTRIES
+</a>
+<a class="text-on-surface-variant hover:bg-surface-container-high mx-2 my-1 rounded-lg flex items-center p-3 font-label-caps text-label-caps" href="products.html">
+<span class="material-symbols-outlined mr-3">inventory_2</span> PRODUCTS
+</a>
+<a class="text-on-surface-variant hover:bg-surface-container-high mx-2 my-1 rounded-lg flex items-center p-3 font-label-caps text-label-caps" href="contact.html">
+<span class="material-symbols-outlined mr-3">mail</span> CONTACT US
+</a>
+</nav>
+</div>
+<!-- Overlay -->
+<div class="fixed inset-0 bg-black/50 z-50 hidden md:hidden transition-opacity" id="nav-overlay"></div>
+<!-- Top App Bar (Desktop) -->
+<header class="w-[95%] max-w-7xl mx-auto top-4 sticky z-50 bg-surface/95 backdrop-blur-md border border-outline-variant rounded-2xl shadow-lg transition-all duration-300">
+<div class="max-w-7xl mx-auto px-6 md:px-8 flex justify-between items-center h-20">
+<!-- Brand -->
+<div class="flex items-center gap-3 cursor-pointer group">
+<div class="w-10 h-10 rounded bg-primary-container flex items-center justify-center shadow-inner bevel-top">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+</div>
+<span class="font-headline-md text-headline-md tracking-tighter text-primary uppercase font-extrabold hidden sm:block group-hover:text-primary-container transition-colors">
+                    Narayan Enterprise
+                </span>
+</div>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex gap-8">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 px-3 py-2 font-label-caps text-label-caps flex items-center gap-2" href="index.html">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">home</span> HOME
+</a>
+<a class="text-secondary font-medium hover:text-primary transition-colors hover:bg-surface-container-high transition-all duration-200 px-3 py-2 rounded-lg font-label-caps text-label-caps flex items-center gap-2" href="about.html">
+<span class="material-symbols-outlined text-[18px]">info</span> ABOUT US
+</a>
+<a class="text-secondary font-medium hover:text-primary transition-colors hover:bg-surface-container-high transition-all duration-200 px-3 py-2 rounded-lg font-label-caps text-label-caps flex items-center gap-2" href="industries.html">
+<span class="material-symbols-outlined text-[18px]">factory</span> INDUSTRIES
+</a>
+<a class="text-secondary font-medium hover:text-primary transition-colors hover:bg-surface-container-high transition-all duration-200 px-3 py-2 rounded-lg font-label-caps text-label-caps flex items-center gap-2" href="products.html">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span> PRODUCTS
+</a>
+<a class="text-secondary font-medium hover:text-primary transition-colors hover:bg-surface-container-high transition-all duration-200 px-3 py-2 rounded-lg font-label-caps text-label-caps flex items-center gap-2" href="contact.html">
+<span class="material-symbols-outlined text-[18px]">mail</span> CONTACT US
+</a>
+</nav>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary p-2 active:scale-95 transition-transform hover:bg-surface-container-high rounded-md" id="open-nav">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-panel-padding space-y-gutter relative z-10">
+<!-- Hero Section: Immersive 3D Scene -->
+<section class="relative w-full rounded-xl overflow-hidden steel-panel min-h-[500px] flex items-center">
+<!-- Structural Accents -->
+<div class="rivet top-4 left-4"></div>
+<div class="rivet top-4 right-4"></div>
+<div class="rivet bottom-4 left-4"></div>
+<div class="rivet bottom-4 right-4"></div>
+<!-- 3D Background Element -->
+<div class="absolute inset-0 right-0 w-full md:w-1/2 h-full opacity-60 md:opacity-100 z-0 flex justify-end items-center pointer-events-none">
+<!-- STITCH_THREEJS_START:ANIMATION_5 class="w-full h-full object-cover" -->
+<div class="w-full h-full object-cover" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_5" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_5');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  const scene = new THREE.Scene();
+const width = container.clientWidth || window.innerWidth;
+const height = container.clientHeight || window.innerHeight;
+const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+renderer.setSize(width, height);
+container.appendChild(renderer.domElement);
+
+// Materials
+const blueSteelMat = new THREE.MeshPhongMaterial({ color: 0x0d2e5e, shininess: 100, specular: 0x555555 });
+const silverSteelMat = new THREE.MeshPhongMaterial({ color: 0xc0c0c0, shininess: 100, specular: 0xffffff });
+
+// Create a simple "Pipe Bundle" group to represent the logo motif
+const pipeGroup = new THREE.Group();
+const pipeGeom = new THREE.CylinderGeometry(0.5, 0.5, 5, 32);
+
+for(let i=0; i<3; i++) {
+    const pipe = new THREE.Mesh(pipeGeom, silverSteelMat);
+    pipe.position.x = i * 1.2 - 1.2;
+    pipe.rotation.z = Math.PI / 2;
+    pipeGroup.add(pipe);
+}
+
+// Add a large 'N' structure using boxes
+const boxGeom = new THREE.BoxGeometry(0.8, 6, 0.8);
+const n1 = new THREE.Mesh(boxGeom, blueSteelMat);
+n1.position.set(-2, 0, 0);
+const n2 = new THREE.Mesh(boxGeom, blueSteelMat);
+n2.position.set(2, 0, 0);
+const diagGeom = new THREE.BoxGeometry(0.8, 6.5, 0.8);
+const nDiag = new THREE.Mesh(diagGeom, blueSteelMat);
+nDiag.rotation.z = -0.6;
+pipeGroup.add(n1, n2, nDiag);
+
+scene.add(pipeGroup);
+
+// Lighting
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+scene.add(ambientLight);
+const pointLight = new THREE.PointLight(0xffffff, 1);
+pointLight.position.set(5, 5, 5);
+scene.add(pointLight);
+
+camera.position.z = 10;
+
+function animate() {
+    requestAnimationFrame(animate);
+    pipeGroup.rotation.y += 0.01;
+    pipeGroup.rotation.x = Math.sin(Date.now() * 0.001) * 0.2;
+    renderer.render(scene, camera);
+}
+animate();
+
+window.addEventListener('resize', () => {
+    const w = container.clientWidth || window.innerWidth;
+    const h = container.clientHeight || window.innerHeight;
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+    renderer.setSize(w, h);
+});
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_5 -->
+</div>
+<!-- Grid Lines overlay -->
+<div class="absolute inset-0 pointer-events-none z-0 hidden md:block" style="background-image: linear-gradient(#e0e3e5 1px, transparent 1px), linear-gradient(90deg, #e0e3e5 1px, transparent 1px); background-size: 64px 64px; opacity: 0.3;"></div>
+<!-- Content -->
+<div class="relative z-10 p-panel-padding md:p-margin-desktop w-full md:w-2/3 backdrop-blur-sm md:backdrop-blur-none bg-surface/40 md:bg-transparent rounded-lg">
+<!-- Brand Context Image (Logo) -->
+<img alt="Narayan Enterprise Logo" class="h-16 mb-6 drop-shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhP7If3rO0Eny1aKtXyOad7FWVA-bHAhLNNrajsM4Lub571wjBzE9T2Zm_7pstRy1L-P_G1KtmDkCe8pbP5Mu09Rdi5Pu2J_6hOyWzFBm2GvlqB_HigVL9hyWKTabdYjfE2dzlHReSOF0In8SzAH4_sTUZtEFBjzrdr8EeRKnlsf_kVNHR4YWbYwMl1mQT2r7gbNGhYT7zn6uoZdrPfiqnmN9PQnbElWkaLiLBI2bI80RSGgd5x_CYVDw7ftdRvxkUfw">
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary uppercase font-extrabold mb-4 leading-tight drop-shadow-sm">
+                    PRECISION STEEL.<br>FOR EVERY VISION.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-8 font-medium">
+                    Serving key industries with quality products. Engineered for strength, built for durability, delivered with uncompromising precision.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="metallic-button font-button-text text-button-text text-on-primary px-8 py-4 rounded-lg uppercase tracking-wider flex items-center gap-2">
+                        EXPLORE PRODUCTS
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<button class="silver-button font-button-text text-button-text border border-outline-variant px-8 py-4 rounded-lg uppercase tracking-wider font-bold">
+                        GET A QUOTE
+                    </button>
+</div>
+</div>
+</section>
+<!-- Stats Counter Panel (Bento Style) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="steel-panel p-6 rounded-lg text-center flex flex-col justify-center relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+<div class="absolute top-0 inset-x-0 h-1 bg-primary"></div>
+<span class="material-symbols-outlined text-primary-container text-4xl mb-2 opacity-50">local_shipping</span>
+<div class="font-headline-lg text-headline-lg text-primary font-extrabold">1M+</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant mt-1">Tons Delivered</div>
+</div>
+<div class="steel-panel p-6 rounded-lg text-center flex flex-col justify-center relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+<div class="absolute top-0 inset-x-0 h-1 bg-surface-tint"></div>
+<span class="material-symbols-outlined text-surface-tint text-4xl mb-2 opacity-50">handshake</span>
+<div class="font-headline-lg text-headline-lg text-primary font-extrabold">500+</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant mt-1">Happy Clients</div>
+</div>
+<div class="steel-panel p-6 rounded-lg text-center flex flex-col justify-center relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+<div class="absolute top-0 inset-x-0 h-1 bg-outline"></div>
+<span class="material-symbols-outlined text-outline text-4xl mb-2 opacity-50">location_city</span>
+<div class="font-headline-lg text-headline-lg text-primary font-extrabold">12</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant mt-1">Network Offices</div>
+</div>
+</section>
+<!-- Overview Cards: Products -->
+<section class="mt-margin-desktop mb-margin-desktop">
+<div class="flex items-center gap-4 mb-8">
+<div class="h-px bg-outline-variant flex-1"></div>
+<h2 class="font-headline-md text-headline-md text-primary font-bold uppercase tracking-widest">Core Products</h2>
+<div class="h-px bg-outline-variant flex-1"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="steel-panel rounded-xl overflow-hidden flex flex-col">
+<div class="h-48 bg-surface-container-high relative flex justify-center items-center bevel-bottom border-b border-outline-variant">
+<img class="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-80 grayscale" data-alt="Close up rendering of highly polished industrial steel rods bundled together in a modern warehouse setting. Dramatic, architectural top-down lighting highlights the metallic sheen and cylindrical geometry. Minimalist background, high contrast, clean, heavy-duty industrial aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd3GU_BNFlrziF7W1nooYT2LS9upRPU3SxRdGLcFe8hnBsyDd9kKh6Z8XjG0g2Ba8hmsOkZ4uTPHCMOMEecOMfT2wzq0rdEsdAzdyqCRmX7nG91vNvsvpBFPHSORP9XolhY-NgqLf8csKHY2-Hvqr-nyTAy2TU9gxvYffj4JUCoAJ0ONcJ1XeSiJVotDTouf3EP56LMPuWHOCMAd3sne_r5sSP1_hLIcyAwxPYa_zIgWDsyr0-bT_h">
+<span class="material-symbols-outlined text-6xl text-primary relative z-10 drop-shadow-md" style="font-variation-settings: 'FILL' 1;">straighten</span>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex items-center justify-between mb-2">
+<h3 class="font-headline-md text-body-lg font-bold text-primary">Steel Rods</h3>
+<span class="bg-surface-container text-on-surface-variant px-2 py-1 rounded text-xs font-label-caps tracking-widest border border-outline-variant">TMT</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-1">High-tensile strength steel rods essential for reinforced concrete structures and heavy construction.</p>
+<button class="w-full py-3 silver-button rounded font-button-text text-button-text font-semibold uppercase flex justify-center items-center gap-2">
+                            View Specs <span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="steel-panel rounded-xl overflow-hidden flex flex-col">
+<div class="h-48 bg-surface-container-high relative flex justify-center items-center bevel-bottom border-b border-outline-variant">
+<div class="absolute inset-0 bg-cover bg-center mix-blend-multiply opacity-80 grayscale" data-alt="Detailed 3D render of structural Mild Steel (MS) angles stacked meticulously on a pallet. The edges are sharp and precise, showing the L-shape profile. Illuminated by cool, industrial workshop lighting to emphasize the structural integrity and heavy metal materiality." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCVAECP4RH7MC_tSFOZ3ZYMxw6raRCTctFHDNWE23Qupop0qGPqHU1oiEEROSX7IdhFW6zsvF68PG4tqTUtHLUj7LrxTQdUtoBYwnwbUCNy34TLBlAbhKWJaSj7_JI-8bl8ezT_cH6FLSOOlhA_0B8AXjK4gLLqcDsBw_-60zbDSX3Xq-EgNvWVdPdPDRtRKF_qui6kkqvJSCmU1tdRezumBc5Dc2torj8BdVf2a8OgOBfTXl_jumrC')"></div>
+<span class="material-symbols-outlined text-6xl text-primary relative z-10 drop-shadow-md" style="font-variation-settings: 'FILL' 1;">architecture</span>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex items-center justify-between mb-2">
+<h3 class="font-headline-md text-body-lg font-bold text-primary">MS Angles</h3>
+<span class="bg-surface-container text-on-surface-variant px-2 py-1 rounded text-xs font-label-caps tracking-widest border border-outline-variant">STRUCT</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-1">L-shaped cross-section steel profiles used in building construction, bridges, and equipment manufacturing.</p>
+<button class="w-full py-3 silver-button rounded font-button-text text-button-text font-semibold uppercase flex justify-center items-center gap-2">
+                            View Specs <span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="steel-panel rounded-xl overflow-hidden flex flex-col">
+<div class="h-48 bg-surface-container-high relative flex justify-center items-center bevel-bottom border-b border-outline-variant">
+<div class="absolute inset-0 bg-cover bg-center mix-blend-multiply opacity-80 grayscale" data-alt="Macro perspective of industrial steel channels (C-channels) resting on a heavy-duty rack. The brushed metal texture is clearly visible on the surface. Studio lighting casts strong, defined shadows to accentuate the 3D depth and structural nature of the material." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCdROdASBD7_ckSQCggRHUuVxVMPVoOJ9ZHhNn8timswA-IVNHcogBa28ppcwp-1g2yO7Ks8FDYLj2Ypm0f9ZI80wIriMxk8pL61PYCkJuRBjGEKd6tUk4CCDLd5fDuXf5bxDQhswtwSjgmPLdZAZGSJmKoHlUaxTDiOGWg61IYwT94UN8NLlOjIrkfGknPYw7SLn3HZVLjRYi99wmhQVJc4VyQKLJdvEfCCmoCOXNV9berQ-MH-Mab')"></div>
+<span class="material-symbols-outlined text-6xl text-primary relative z-10 drop-shadow-md" style="font-variation-settings: 'FILL' 1;">horizontal_split</span>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex items-center justify-between mb-2">
+<h3 class="font-headline-md text-body-lg font-bold text-primary">Channels</h3>
+<span class="bg-surface-container text-on-surface-variant px-2 py-1 rounded text-xs font-label-caps tracking-widest border border-outline-variant">U-PRO</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-1">U-shaped steel profiles providing superior structural support for frameworks, braces, and tracks.</p>
+<button class="w-full py-3 silver-button rounded font-button-text text-button-text font-semibold uppercase flex justify-center items-center gap-2">
+                            View Specs <span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<!-- Footer -->
+<footer class="bg-tertiary-container dark:bg-on-background w-full mt-auto border-t border-outline shadow-[inset_0_2px_4px_rgba(0,0,0,0.1)] relative overflow-hidden">
+<!-- Subtle background accent/gradient -->
+<div class="absolute inset-0 bg-gradient-to-br from-tertiary-container via-tertiary-container to-[#1a1f24] opacity-80 z-0"></div>
+
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-16 relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+    <!-- Brand & Info -->
+    <div class="flex flex-col gap-6">
+        <div class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center shadow-md">
+            <span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+        </div>
+        <span class="font-display-lg text-headline-md tracking-tighter text-surface-bright uppercase">Narayan Enterprise</span>
+        </div>
+        <p class="font-body-md text-surface-variant leading-relaxed">
+        Forging the future with precision steel. Supplying top-grade materials for industrial and structural needs worldwide.
+        </p>
+        <!-- Socials -->
+        <div class="flex gap-4 mt-2">
+        <a href="#" class="w-10 h-10 rounded-full bg-surface-variant/10 flex items-center justify-center text-surface-bright hover:bg-primary-fixed hover:text-primary transition-colors hover:-translate-y-1">
+            <span class="material-symbols-outlined text-[20px]">share</span>
+        </a>
+        <a href="#" class="w-10 h-10 rounded-full bg-surface-variant/10 flex items-center justify-center text-surface-bright hover:bg-primary-fixed hover:text-primary transition-colors hover:-translate-y-1">
+            <span class="material-symbols-outlined text-[20px]">language</span>
+        </a>
+        </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="flex flex-col gap-4">
+        <h4 class="font-label-caps text-label-caps text-primary-fixed mb-2">QUICK LINKS</h4>
+        <nav class="flex flex-col gap-3">
+        <a class="font-body-md text-surface-variant hover:text-primary-fixed hover:translate-x-1 transition-all flex items-center gap-2 w-fit" href="index.html">
+            <span class="material-symbols-outlined text-[16px]">chevron_right</span> Home
+        </a>
+        <a class="font-body-md text-surface-variant hover:text-primary-fixed hover:translate-x-1 transition-all flex items-center gap-2 w-fit" href="about.html">
+            <span class="material-symbols-outlined text-[16px]">chevron_right</span> About Us
+        </a>
+        <a class="font-body-md text-surface-variant hover:text-primary-fixed hover:translate-x-1 transition-all flex items-center gap-2 w-fit" href="industries.html">
+            <span class="material-symbols-outlined text-[16px]">chevron_right</span> Industries
+        </a>
+        <a class="font-body-md text-surface-variant hover:text-primary-fixed hover:translate-x-1 transition-all flex items-center gap-2 w-fit" href="products.html">
+            <span class="material-symbols-outlined text-[16px]">chevron_right</span> Products
+        </a>
+        <a class="font-body-md text-surface-variant hover:text-primary-fixed hover:translate-x-1 transition-all flex items-center gap-2 w-fit" href="contact.html">
+            <span class="material-symbols-outlined text-[16px]">chevron_right</span> Contact Us
+        </a>
+        </nav>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="flex flex-col gap-4">
+        <h4 class="font-label-caps text-label-caps text-primary-fixed mb-2">CONTACT US</h4>
+        <ul class="flex flex-col gap-4">
+        <li class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-primary-fixed mt-0.5" style="font-variation-settings: 'FILL' 1;">location_on</span>
+            <span class="font-body-md text-surface-variant">123 Steel Hub Industrial Estate,<br>Mumbai, Maharashtra 400001</span>
+        </li>
+        <li class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary-fixed" style="font-variation-settings: 'FILL' 1;">call</span>
+            <span class="font-body-md text-surface-variant">+91 98765 43210</span>
+        </li>
+        <li class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary-fixed" style="font-variation-settings: 'FILL' 1;">mail</span>
+            <span class="font-body-md text-surface-variant">sales@narayanenterprise.com</span>
+        </li>
+        </ul>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="flex flex-col gap-4">
+        <h4 class="font-label-caps text-label-caps text-primary-fixed mb-2">STAY UPDATED</h4>
+        <p class="font-body-md text-surface-variant mb-2">Subscribe to our newsletter for the latest market insights and product updates.</p>
+        <form class="flex flex-col gap-3 group" onsubmit="event.preventDefault();">
+        <div class="relative">
+            <input type="email" placeholder="Email Address" required class="w-full bg-surface-variant/10 border border-outline-variant/30 rounded-lg px-4 py-3 text-surface-bright placeholder:text-surface-variant/50 focus:outline-none focus:border-primary-fixed focus:ring-1 focus:ring-primary-fixed transition-all font-body-md">
+        </div>
+        <button type="submit" class="bg-primary-fixed text-primary font-button-text font-bold rounded-lg px-4 py-3 hover:bg-surface-bright transition-colors flex justify-center items-center gap-2 active:scale-95">
+            SUBSCRIBE <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </button>
+        </form>
+    </div>
+    </div>
+</div>
+
+<!-- Bottom bar -->
+<div class="border-t border-outline-variant/20 relative z-10">
+    <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+    <p class="font-body-md text-surface-variant text-sm text-center md:text-left">
+        &copy; 2024 Narayan Enterprise. All Rights Reserved.
+    </p>
+    <div class="flex gap-6">
+        <a href="#" class="font-body-md text-surface-variant text-sm hover:text-primary-fixed transition-colors">Privacy Policy</a>
+        <a href="#" class="font-body-md text-surface-variant text-sm hover:text-primary-fixed transition-colors">Terms of Service</a>
+    </div>
+    </div>
+</div>
+</footer>
+<script>
+        // Simple Mobile Nav Script
+        document.addEventListener('DOMContentLoaded', () => {
+            const openBtn = document.getElementById('open-nav');
+            const closeBtn = document.getElementById('close-nav');
+            const nav = document.getElementById('mobile-nav');
+            const overlay = document.getElementById('nav-overlay');
+
+            function toggleNav() {
+                const isOpen = !nav.classList.contains('-translate-x-full');
+                if (isOpen) {
+                    nav.classList.add('-translate-x-full');
+                    overlay.classList.add('hidden');
+                    document.body.style.overflow = '';
+                } else {
+                    nav.classList.remove('-translate-x-full');
+                    overlay.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+
+            openBtn.addEventListener('click', toggleNav);
+            closeBtn.addEventListener('click', toggleNav);
+            overlay.addEventListener('click', toggleNav);
+        });
+    </script>
+
+</div>
+<div class="hidden lg:block">
+
+<!-- TopAppBar -->
+<header class="w-[95%] max-w-7xl mx-auto top-4 sticky z-50 bg-surface/95 dark:bg-tertiary-container/95 backdrop-blur-md border border-outline-variant rounded-2xl shadow-lg transition-all duration-300">
+<div class="max-w-7xl mx-auto px-margin-desktop flex justify-between items-center h-20">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim text-3xl" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+<span class="font-display-lg text-headline-md tracking-tighter text-primary dark:text-primary-fixed uppercase">Narayan Enterprise</span>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 px-3 py-2 font-label-caps text-label-caps flex items-center gap-2" href="index.html">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">home</span> HOME
+</a>
+<a class="text-secondary font-medium hover:text-primary transition-colors hover:bg-surface-container-high transition-all duration-200 px-3 py-2 rounded-lg font-label-caps text-label-caps flex items-center gap-2" href="about.html">
+<span class="material-symbols-outlined text-[18px]">info</span> ABOUT US
+</a>
+<a class="text-secondary font-medium hover:text-primary transition-colors hover:bg-surface-container-high transition-all duration-200 px-3 py-2 rounded-lg font-label-caps text-label-caps flex items-center gap-2" href="industries.html">
+<span class="material-symbols-outlined text-[18px]">factory</span> INDUSTRIES
+</a>
+<a class="text-secondary font-medium hover:text-primary transition-colors hover:bg-surface-container-high transition-all duration-200 px-3 py-2 rounded-lg font-label-caps text-label-caps flex items-center gap-2" href="products.html">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span> PRODUCTS
+</a>
+<a class="text-secondary font-medium hover:text-primary transition-colors hover:bg-surface-container-high transition-all duration-200 px-3 py-2 rounded-lg font-label-caps text-label-caps flex items-center gap-2" href="contact.html">
+<span class="material-symbols-outlined text-[18px]">mail</span> CONTACT US
+</a>
+</nav>
+
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow max-w-7xl mx-auto px-margin-desktop py-12 w-full">
+<!-- Hero Section -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-16 items-center min-h-[60vh]">
+<div class="flex flex-col gap-6 z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container rounded-sm border border-outline-variant w-fit shadow-[inset_0_1px_2px_rgba(0,0,0,0.05)]">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-caps text-label-caps text-secondary tracking-widest">STEEL TRADING EXPERTS</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface leading-tight">
+                    PRECISION STEEL.<br>
+<span class="text-primary">FOR EVERY VISION.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                    Delivering top-grade structural steel and industrial materials with uncompromising quality and reliability. Building the foundations of tomorrow.
+                </p>
+<div class="flex gap-4 mt-4">
+<button class="btn-metal font-button-text text-button-text text-on-primary px-8 py-4 rounded flex items-center gap-2">
+                        EXPLORE CATALOG <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="metal-panel font-button-text text-button-text text-primary px-8 py-4 rounded hover:bg-surface-container-high transition-colors">
+                        VIEW PROJECTS
+                    </button>
+</div>
+</div>
+<div class="relative h-[500px] rounded-xl overflow-hidden metal-panel p-4 flex items-center justify-center">
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-surface-container-lowest to-surface-container-high opacity-50 z-0"></div>
+<img class="w-full h-full object-contain z-10 relative drop-shadow-2xl" data-alt="A highly detailed, photorealistic 3D rendering of a large, interlocking metal 'NE' logo. The logo is constructed from polished, heavy-duty brushed steel and deep metallic blue materials. The 'N' and 'E' are thick, industrial block letters, intricately intertwined. Resting at the base of the logo is a bundle of varied steel products: several cylindrical steel pipes and square steel hollow sections. The scene is brightly lit from above, creating sharp highlights on the metallic edges and realistic soft drop shadows below. The background is a clean, bright, modern light-mode studio environment, evoking themes of precision manufacturing, industrial strength, and executive corporate identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK6ypcp348hSgyf-DdDZSrLxNxY87sJrZcJHVEsbLFUs_ZLYRuzxhTmMwRLJu5HyvtVqURD8nB0ZFXTNljKktbtx7CUyxlkV1PUHLYodSsIJPierxqgBErUchgnsav19FT_UfkLzqaFL3M4PErBccV1NVn-beSsYQiIFijbKmZTWLbMvQr7yEF7S9oU4UTKcpdf_HcwdRljmd23n0EWYJGBWGzJkTnTs7Dn4XzGcfLm3WvUfGYU2Pq">
+</div>
+</section>
+<!-- Stats Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-20">
+<div class="metal-panel p-panel-padding rounded-lg relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+<div class="absolute top-2 right-2 w-2 h-2 rounded-full bg-surface-dim shadow-[inset_0_1px_1px_rgba(0,0,0,0.2)]"></div>
+<div class="absolute top-2 left-2 w-2 h-2 rounded-full bg-surface-dim shadow-[inset_0_1px_1px_rgba(0,0,0,0.2)]"></div>
+<div class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-surface-dim shadow-[inset_0_1px_1px_rgba(0,0,0,0.2)]"></div>
+<div class="absolute bottom-2 left-2 w-2 h-2 rounded-full bg-surface-dim shadow-[inset_0_1px_1px_rgba(0,0,0,0.2)]"></div>
+<div class="flex flex-col gap-2">
+<span class="material-symbols-outlined text-primary text-4xl mb-2" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+<h3 class="font-display-lg text-headline-lg text-on-surface">500K+</h3>
+<p class="font-label-caps text-label-caps text-secondary">TONS DELIVERED</p>
+</div>
+</div>
+<div class="metal-panel p-panel-padding rounded-lg relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300 bg-primary-container text-on-primary-container border-none">
+<div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4xKSIvPjwvc3ZnPg==')] opacity-30"></div>
+<div class="relative z-10 flex flex-col gap-2">
+<span class="material-symbols-outlined text-inverse-primary text-4xl mb-2" style="font-variation-settings: 'FILL' 1;">handshake</span>
+<h3 class="font-display-lg text-headline-lg text-surface-container-lowest">1,200+</h3>
+<p class="font-label-caps text-label-caps text-primary-fixed-dim">HAPPY CLIENTS</p>
+</div>
+</div>
+<div class="metal-panel p-panel-padding rounded-lg relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+<div class="absolute top-2 right-2 w-2 h-2 rounded-full bg-surface-dim shadow-[inset_0_1px_1px_rgba(0,0,0,0.2)]"></div>
+<div class="absolute top-2 left-2 w-2 h-2 rounded-full bg-surface-dim shadow-[inset_0_1px_1px_rgba(0,0,0,0.2)]"></div>
+<div class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-surface-dim shadow-[inset_0_1px_1px_rgba(0,0,0,0.2)]"></div>
+<div class="absolute bottom-2 left-2 w-2 h-2 rounded-full bg-surface-dim shadow-[inset_0_1px_1px_rgba(0,0,0,0.2)]"></div>
+<div class="flex flex-col gap-2">
+<span class="material-symbols-outlined text-primary text-4xl mb-2" style="font-variation-settings: 'FILL' 1;">business</span>
+<h3 class="font-display-lg text-headline-lg text-on-surface">15+</h3>
+<p class="font-label-caps text-label-caps text-secondary">NETWORK OFFICES</p>
+</div>
+</div>
+</section>
+<!-- Core Products Section -->
+<section class="mb-16">
+<div class="flex justify-between items-end mb-8 border-b border-outline-variant pb-4">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Core Products</h2>
+<p class="font-body-md text-body-md text-secondary mt-1">Industrial grade materials for robust construction.</p>
+</div>
+<a class="font-button-text text-button-text text-primary hover:underline flex items-center gap-1" href="products.html">VIEW ALL <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Product Card 1 -->
+<div class="metal-panel rounded-lg overflow-hidden flex flex-col group">
+<div class="h-48 bg-surface-container-high relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A close-up, high-fidelity photograph of stacked steel rebar rods. The ribbed texture of the steel rods is sharply in focus, displaying a brushed, metallic grey finish. They are arranged uniformly in a bundle. The lighting is studio quality, coming from the top-left, casting sharp, defined shadows between the rods, emphasizing their structural strength and industrial nature. The background is a clean, neutral light grey, typical of a modern corporate product catalog." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXSWYXFprHs_VEdMAqNc7C25SxrpfPQLm0Ys5r0ztQ1Lr1XwTylqi5hex3yiNwxa0H7tfkOGTOk5TMAV4whBKPgoIT0J5NOV9sOhH3auIMBBzuroD4dY8ErfNiZJoMW0tWPv9sd1kZb7eiKuHnd0Z55SbkfLrzUwZY3Eu-08Ya2f3n0gv-5ySJggmzbOyfcmvsJBUgQklsNaO967Dcm7Kdsqcj5Gyp8CS-Z-5wHvhXySLpZBCYOUvP">
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="font-headline-md text-body-lg font-bold text-on-surface mb-2">Steel Rods / Rebar</h3>
+<p class="font-body-md text-body-md text-secondary mb-4 flex-grow">High-tensile strength rods essential for reinforced concrete structures.</p>
+<div class="flex justify-between items-center border-t border-outline-variant pt-3 mt-auto">
+<span class="font-label-caps text-label-caps text-on-surface-variant">IS:1786 GRADES</span>
+<button class="text-primary hover:text-primary-container transition-colors"><span class="material-symbols-outlined">add_circle</span></button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="metal-panel rounded-lg overflow-hidden flex flex-col group">
+<div class="h-48 bg-surface-container-high relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A detailed, sharply focused image of several MS (Mild Steel) Angles stacked neatly. The L-shaped profiles are clearly visible, showcasing a smooth, heavy-duty metallic finish with slightly beveled edges. The lighting highlights the top surfaces while casting deep, realistic shadows in the inner corners of the angles. The background is a minimalist, light-mode environment, putting full emphasis on the quality and precision of the structural steel components." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3ZPDCfU6klKYNp6e2XwGVJM0B3GTJ--6eoPzO6vXMM94D7EPoj6CJDC1_QFKXa1ZqW0NPAHE1MUn5vwwsuSFbH4hWczYnVZ28G7RuYuoDNHoWGFpHw36-xiIdJTz1pRF1eopQuyY5S-t7AjFl_JPk7o_8uSs0rNqCUQTZ7hOV0opx6Zeo1EnFd3qOcpUvHxLPGmS6qLsQtXNlFstGU_0FFVWDeAQXNIBLz3AfnL_hlWd6nvOih7CD">
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="font-headline-md text-body-lg font-bold text-on-surface mb-2">MS Angles</h3>
+<p class="font-body-md text-body-md text-secondary mb-4 flex-grow">L-shaped cross-sections used in building frameworks, towers, and structural supports.</p>
+<div class="flex justify-between items-center border-t border-outline-variant pt-3 mt-auto">
+<span class="font-label-caps text-label-caps text-on-surface-variant">EQUAL &amp; UNEQUAL</span>
+<button class="text-primary hover:text-primary-container transition-colors"><span class="material-symbols-outlined">add_circle</span></button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="metal-panel rounded-lg overflow-hidden flex flex-col group">
+<div class="h-48 bg-surface-container-high relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A precise, industrial product shot of steel channels (C-channels or U-channels). The metallic profiles are arranged symmetrically, highlighting their uniform shape, thick webs, and flanges. The material appears strong and heavy, with a brushed metal surface texture. Top-down studio lighting creates a stark contrast between the highlighted edges and the shadowed recesses of the channels. The setting is clean and bright, reflecting a premium, modern steel supplier aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKD7Sfoj0Rbegp-K_hE3ASQmZl-1mbBx6B1oP9Sz0_p20C-MNOZZH8XhELGPyfwHEuUtGLB5uEj0SircfrIaq_djNIRmN-BJzDDT5s_0wsfYXlh0PKgmkZQNvO2mj0O_Zc_j92zPuMLqyKE3tMfV8WHLcvhF07-6H-Uz_hBCiYSeTz6kQveKhHGyN5ZGaOu5ARkVILZeUwgi8kvw-3MIyVIZcrEsu4A21A59WdNEOb0zEpreF9g9HF">
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="font-headline-md text-body-lg font-bold text-on-surface mb-2">Channels</h3>
+<p class="font-body-md text-body-md text-secondary mb-4 flex-grow">U-shaped steel sections ideal for industrial framing, supports, and heavy machinery bases.</p>
+<div class="flex justify-between items-center border-t border-outline-variant pt-3 mt-auto">
+<span class="font-label-caps text-label-caps text-on-surface-variant">STRUCTURAL C-SECTIONS</span>
+<button class="text-primary hover:text-primary-container transition-colors"><span class="material-symbols-outlined">add_circle</span></button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<!-- Footer -->
+
+
+</div>
+        </body></html>
